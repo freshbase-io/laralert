@@ -24,6 +24,8 @@ class LaralertServiceProvider extends ServiceProvider implements DeferrableProvi
      */
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../config/laralert.php', 'laralert');
+
         $this->app->singleton(
             'command.laralert.update',
             function () {

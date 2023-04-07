@@ -37,7 +37,7 @@ class UpdateCommand extends Command
         $composerLock = base_path('composer.lock');
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, 'https://www.freshbase.io/u/be3cdaa3-8c88-467d-b1f7-7abe004c674f');
+        curl_setopt($ch, CURLOPT_URL, 'https://www.freshbase.io/u/' . config('laralert.id'));
         curl_setopt($ch, CURLOPT_POST, 1);
         $fields = [
             'cj' => new CurlFile($composerJson, 'text/plain', 'composer.json'),
