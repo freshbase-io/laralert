@@ -1,0 +1,47 @@
+{
+  "name": "freshbase-io/laralert",
+  "type": "library",
+  "description": "Security Monitor for Laravel",
+  "keywords": [
+    "laravel",
+    "security",
+    "vulnerability",
+    "monitor",
+    "alarm",
+    "alert",
+    "composer"
+  ],
+  "homepage": "https://www.freshbase.io/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andreas Håkansson",
+      "email": "andreas@freshbase.io"
+    }
+  ],
+  "require": {
+    "composer-plugin-api": "^2.0",
+    "ext-curl": "*",
+    "php": "^7.3 || ^8.0",
+    "illuminate/console": "^8 || ^9 || ^10",
+    "illuminate/filesystem": "^8 || ^9 || ^10",
+    "illuminate/support": "^8 || ^9 || ^10"
+  },
+  "require-dev": {
+    "composer/composer": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "FreshbaseIo\\Laralert\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "FreshbaseIo\\Laralert\\LaralertServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
